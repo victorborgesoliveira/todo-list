@@ -1,0 +1,4 @@
+- Deve ser possivel criar tarefas
+- Deve ser possivel editar tarefas
+- Deve ser possivel excluir tarefas
+- Deve ser possivel ver/ pesquisar tarefas

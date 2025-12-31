@@ -1,24 +1,11 @@
+from datetime import datetime, UTC
+
 def main():
-    try:
-        firstNumber = int(input('Enter your number:'))
-    except ValueError:
-        print("Not a number")
-        return
-    try:
-        secondNumber = int(input('Enter your number:'))
-    except ValueError:
-        print("Not a number")
-        return
-    
-    symbol = input("Enter your symbol:")
-    
-    if symbol == '+':
-        return print(firstNumber + secondNumber)
-    if symbol == '-':
-        return print(firstNumber - secondNumber)
-    if symbol == '*':
-        return print(firstNumber * secondNumber)
-    if symbol == '/':
-        return print(firstNumber / secondNumber)
-    
-main()
+    createTask()
+
+def createTask():
+    description = input('Add task description:')
+    status = 'created'
+    created_at = datetime.now(UTC)
+    print('new task added: ' + description + ', with status: ' + status)
+main() 
