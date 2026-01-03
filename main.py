@@ -1,4 +1,5 @@
 from datetime import datetime, UTC
+from models.task import Task
 
 def main():
     setupDB()
@@ -8,8 +9,8 @@ def createTask():
     description = input('Add task description:')
     status = 'created'
     created_at = datetime.now(UTC)
-    print('new task added: ' + description + ', with status: ' + status)
-
+    task = Task(status=status, created_at=created_at, description=description)
+    print(task)
 def setupDB():
     filename = 'db.json'
     try:
