@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from datetime import datetime
 
+
 @dataclass(slots=True)
 class Task:
     description: str
@@ -11,3 +12,8 @@ class Task:
         self.status = status
         self.description = description
         self.created_at = created_at
+
+    def to_dict(self) -> dict:
+        return {
+            "description": self.description, "status": self.status, "created_at": self.created_at.isoformat()
+        }
