@@ -7,7 +7,26 @@ filename = 'db.json'
 
 def main():
     setupDB()
-    createTask()
+    print('Welcome to todo list app')
+    menu()
+
+
+def menu():
+    print('1 - Create task \n'
+          '9 - Exit')
+    option = input('Choose a option: ')
+
+    if (option == '1'):
+        createTask()
+        return menu()
+    if (option == '9'):
+        return print('Closing program')
+    print('Invalid option')
+    menu()
+
+
+def listTask():
+    readDB()
 
 
 def createTask():
